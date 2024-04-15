@@ -8,5 +8,6 @@
   <name>spring-boot-examples</name>
   <modules>
     <module>spring-boot-hello</module>
+    <module>spring-boot-banner</module>
   </modules>
 </project>
