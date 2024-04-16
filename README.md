@@ -30,3 +30,28 @@ mvn clean package -Dmaven.test.skip=true spring-boot:run --projects spring-boot-
 ```
 curl http://127.0.0.1:8080
 ```
+
+### Make project spring-boot-helloworld
+- Initialize project
+```
+spring init --build=maven --java-version=17 --description="spring boot helloworld request api" --packaging=jar --group-id=com.dc --artifact-id=spring-boot-helloworld --package-name=com.dc --dependencies=web --name=helloworld spring-boot-helloworld
+```
+- Add module to `pom.xml`
+```
+  <modules>
+    <module>spring-boot-helloworld</module>
+  </modules>
+```
+- Run the project
+```
+mvn clean package -Dmaven.test.skip=true spring-boot:run --projects spring-boot-helloworld
+```
+- check the API
+```
+curl http://127.0.0.1:8080/hello
+```
+- Add test case and run the test case
+```
+mvn clean package test --projects spring-boot-helloworld 
+```
+
