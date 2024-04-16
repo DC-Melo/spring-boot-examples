@@ -55,3 +55,12 @@ curl http://127.0.0.1:8080/hello
 mvn clean package test --projects spring-boot-helloworld 
 ```
 
+### spring boot scheduler
+- Initialise project
+```
+spring init --build=maven --java-version=17 --description="spring boot scheduler request api" --packaging=jar --group-id=com.dc --artifact-id=spring-boot-scheduler --package-name=com.dc --dependencies=web --name=scheduler spring-boot-scheduler
+```
+- Run the project
+```
+mvn clean package -Dmaven.test.skip=true spring-boot:run --projects spring-boot-scheduler
+```
